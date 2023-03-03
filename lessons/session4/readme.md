@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Session 3 - More image processing with ```OpenCV```
+=======
+# Session 4 - Convolutional kernels
+>>>>>>> CDS-AU-DK-main
 
 ## Overview
 
