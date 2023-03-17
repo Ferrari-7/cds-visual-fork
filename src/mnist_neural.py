@@ -56,8 +56,24 @@ def network_arch():
               metrics=["accuracy"])
     return model
 
-def fit_data():
-    history = model.fit(X_train, y_train,  
-                    epochs=10, 
-                    batch_size=32)
-    return history
+# Fitting model to data.
+def fit_data(model):
+    model.fit(X_train, y_train,  epochs=10, batch_size=32)
+    return model
+
+# Creating a classification report.
+def clf_report(X_test):
+    predictions = model.predict(X_test)
+    print(classification_report(y_test.argmax(axis=1), 
+                            predictions.argmax(axis=1), 
+                            target_names=[str(x) for x in lb.classes_]))
+
+def main():
+    load_data()
+    network_arch()
+    fit_data(model)
+    clf_report(X_test)
+
+
+if __name__=="__main__":
+    main()
