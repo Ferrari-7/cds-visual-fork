@@ -72,7 +72,7 @@ def main():
     load_data()
     network_arch()
     fit_data(model)
-    clf_report(X_test)
+    clf_report(X_test, y_test)
 
 
 if __name__=="__main__":
