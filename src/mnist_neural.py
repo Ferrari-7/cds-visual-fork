@@ -62,7 +62,7 @@ def fit_data(model):
     return model
 
 # Creating a classification report.
-def clf_report(X_test):
+def clf_report(X_test, y_test):
     predictions = model.predict(X_test)
     print(classification_report(y_test.argmax(axis=1), 
                             predictions.argmax(axis=1), 
